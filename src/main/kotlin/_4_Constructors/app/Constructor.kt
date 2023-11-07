@@ -1,6 +1,6 @@
 package _4_Constructors.app
 
-import _5_Initializer_Block.data.Car
+import _4_Constructors.data.Car
 
 fun main() {
     val avanza = Car("Toyota")
