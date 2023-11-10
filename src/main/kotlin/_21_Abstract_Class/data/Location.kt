@@ -1,4 +1,4 @@
-package _21_Abstract_class.data
+package _21_Abstract_Class.data
 
 /**
  * tidak perlu menambahkan open

@@ -1,8 +1,8 @@
-package _21_Abstract_class.app
+package _21_Abstract_Class.app
 
 
-import _21_Abstract_class.data.City
-import _21_Abstract_class.data.Country
+import _21_Abstract_Class.data.City
+import _21_Abstract_Class.data.Country
 
 fun main() {
 
