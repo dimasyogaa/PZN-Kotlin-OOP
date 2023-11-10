@@ -9,3 +9,7 @@ fun main() {
     println(user) // auto menjalankan override function to string
     println(user2)
 }
+/**
+ * Jika tidak override toSting
+ * maka yang dikembalikan alamat memori
+ */
