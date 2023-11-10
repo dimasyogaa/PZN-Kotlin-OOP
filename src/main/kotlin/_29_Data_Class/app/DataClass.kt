@@ -7,6 +7,9 @@ import _29_Data_Class.data.Product
  * Data Class cocok digunakan dalam hal ini
  * Data Class merupakan class yang secara otomatis akan membuatkan function equals, hashCode, toString dan copy dari semua properties yang terdapat di primary constructors yang dimiliki oleh data class
  *
+ * Data class memiliki function copy yang bisa digunakan untuk menduplikasi object.
+ * Bahkan metode copy yang terdapat di data class bisa digunakan untuk menduplikasi sekaligus mengubah properties nya
+ *
  */
 
 fun main() {
