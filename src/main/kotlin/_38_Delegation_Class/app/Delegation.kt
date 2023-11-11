@@ -1,7 +1,7 @@
-package _38_Delegation.app
+package _38_Delegation_Class.app
 
-import _38_Delegation.data.MyBase
-import _38_Delegation.data.MyBaseDelegate
+import _38_Delegation_Class.data.MyBase
+import _38_Delegation_Class.data.MyBaseDelegate
 
 fun main() {
 
@@ -11,7 +11,7 @@ fun main() {
 
     println()
 
-    // delegation manual
+    // delegation manual - MyBaseDelegate(myBase) => pengirimDelegasi(PenerimaDelegasi)
     val baseDelegate = MyBaseDelegate(myBase)
     baseDelegate.sayHello("Dimas")
     baseDelegate.sayGoodBye("Dimas")

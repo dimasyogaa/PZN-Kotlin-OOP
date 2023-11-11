@@ -1,4 +1,4 @@
-package _38_Delegation.data
+package _38_Delegation_Class.data
 
 
 /**
@@ -18,6 +18,7 @@ interface Base {
     fun sayGoodBye(name: String)
 }
 
+// Delegation-nya - Penerima Delegasi
 class MyBase : Base {
     override fun sayHello(name: String) {
         println("Hello $name")
@@ -27,7 +28,7 @@ class MyBase : Base {
     }
 }
 
-// Delegation Manual
+// Delegation Manual - Pengirim Delegasi
 class MyBaseDelegate(val base: Base) : Base {
     override fun sayHello(name: String) {
         base.sayHello(name)
@@ -37,7 +38,7 @@ class MyBaseDelegate(val base: Base) : Base {
     }
 }
 
-// Delegation Otomatis
+// Delegation Otomatis - delegation-nya yaitu by iniBase
 // tidak wajib override semua function untuk mendelegasikan
 class MyBaseDelegateAuto(val iniBase: Base) : Base by iniBase {
 
