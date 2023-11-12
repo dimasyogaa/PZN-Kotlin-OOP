@@ -1,4 +1,4 @@
-package _46_Annotation_Target
+package _46_Annotation_Target.data
 
 
 /**
