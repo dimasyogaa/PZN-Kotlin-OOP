@@ -1,0 +1,6 @@
+Kotlin memiliki standar library yang berisikan beberapa function
+yang bisa digunakan untuk mengeksekusi object dengan mudah memanfaatkan lambda expression
+
+Function-function tersebut adalah let, run, with, apply, dan also
+
+istilahnya helper function
