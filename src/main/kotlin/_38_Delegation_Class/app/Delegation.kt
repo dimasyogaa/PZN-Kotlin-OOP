@@ -2,6 +2,7 @@ package _38_Delegation_Class.app
 
 import _38_Delegation_Class.data.MyBase
 import _38_Delegation_Class.data.MyBaseDelegate
+import _38_Delegation_Class.data.MyBaseDelegateAuto
 
 fun main() {
 
@@ -19,7 +20,7 @@ fun main() {
     println()
 
     // delegation auto
-    val baseDelegateAuto = MyBaseDelegate(myBase)
+    val baseDelegateAuto = MyBaseDelegateAuto(myBase)
     baseDelegateAuto.sayHello("Pambudi")
     baseDelegateAuto.sayGoodBye("Pambudi")
 
