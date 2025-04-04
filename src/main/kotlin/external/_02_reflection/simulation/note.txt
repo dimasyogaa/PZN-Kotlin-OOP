@@ -1,0 +1,98 @@
+🔄 ALUR EKSEKUSI KODE – LANGKAH PER LANGKAH
+
+
+
+💻 1. Program dimulai dari main()
+
+fun main() {
+    val main = AppContainer.get(MainActivity::class)
+    main.onCreate()
+}
+
+
+
+
+🧱 2. AppContainer.get(MainActivity::class) dipanggil
+
+    Ini memanggil fungsi get() di class MiniDIContainer.
+
+    Karena MainActivity belum ada di dalam instances, maka dibuat baru.
+
+    val instance = instances.getOrPut(clazz) {
+        clazz.createInstance()  // => MainActivity()
+    }
+
+
+
+🏗️ 3. Instance MainActivity dibuat dengan createInstance()
+
+    Kotlin menggunakan reflection untuk memanggil primary constructor MainActivity().
+
+    Objek MainActivity disimpan dalam instances map di AppContainer.
+
+
+
+
+⚙️ 4. main.onCreate() dipanggil
+
+        main.onCreate()
+
+    Fungsi onCreate() milik MainActivity dieksekusi:
+
+        println("MainActivity created")
+
+    Output muncul: ✅ MainActivity created
+
+
+
+🚀 5. MiniIntent(MainActivity::class, LoginActivity::class) dibuat
+
+    Membuat objek intent dari MainActivity ke LoginActivity.
+
+
+
+📦 6. intent.start(AppContainer) dipanggil
+
+        val target = context.get(to)
+
+    to adalah LoginActivity::class
+
+    DI container (AppContainer) diminta untuk memberikan instance dari LoginActivity
+
+
+
+🧱 7. DI Container cek apakah LoginActivity sudah ada
+
+    Belum ada → dibuat baru dengan createInstance()
+
+    Instance disimpan di map
+
+
+
+
+🧩 8. LoginActivity.onCreate() dipanggil
+
+        target.onCreate()
+
+    Output muncul: ✅ LoginActivity created
+
+
+
+
+✅ 9. Final Output di Console
+
+MainActivity created
+Navigating from MainActivity to LoginActivity
+LoginActivity created
+
+🧭 Rangkuman Langkah
+Langkah	Proses
+1	Program dimulai di main()
+2	Meminta instance MainActivity dari DI container
+3	MainActivity dibuat dengan reflection
+4	MainActivity.onCreate() dipanggil
+5	Intent dibuat dari Main → Login
+6	Intent start() dipanggil
+7	DI container membuat LoginActivity
+8	LoginActivity.onCreate() dipanggil
+9	Semua output muncul di konsol
